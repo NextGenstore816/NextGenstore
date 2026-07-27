@@ -1,3 +1,4 @@
+
 *{
 margin:0;
 padding:0;
@@ -7,7 +8,8 @@ font-family:'Poppins',sans-serif;
 
 body{
 background:#0d0d0d;
-color:white;
+color:#fff;
+line-height:1.6;
 }
 
 header{
@@ -18,6 +20,7 @@ padding:20px 8%;
 background:#111;
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 .logo{
@@ -30,14 +33,19 @@ gap:10px;
 width:55px;
 height:55px;
 border-radius:50%;
+object-fit:cover;
+}
+
+.logo h2{
+color:#d4af37;
 }
 
 nav a{
 text-decoration:none;
-color:white;
+color:#fff;
 margin-left:25px;
-transition:.3s;
 font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
@@ -50,25 +58,26 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(135deg,#111,#1d1d1d);
 padding:20px;
-background:linear-gradient(135deg,#111,#1b1b1b);
 }
 
 .hero h1{
-font-size:3.2rem;
+font-size:3rem;
 margin-bottom:15px;
 }
 
 .hero p{
 font-size:1.2rem;
-color:#cfcfcf;
 margin-bottom:30px;
+color:#ccc;
 }
 
 .btn{
+display:inline-block;
+padding:14px 35px;
 background:#d4af37;
-color:black;
-padding:14px 34px;
+color:#000;
 text-decoration:none;
 border-radius:30px;
 font-weight:bold;
@@ -76,7 +85,8 @@ transition:.3s;
 }
 
 .btn:hover{
-background:white;
+background:#fff;
+transform:scale(1.05);
 }
 
 section{
@@ -87,6 +97,7 @@ h2{
 text-align:center;
 margin-bottom:40px;
 font-size:2rem;
+color:#d4af37;
 }
 
 .cards{
@@ -95,25 +106,55 @@ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
 
-.card,.product{
+.card,
+.product{
 background:#181818;
 padding:30px;
 border-radius:15px;
 text-align:center;
 transition:.3s;
+cursor:pointer;
 }
 
-.card:hover,.product:hover{
+.card:hover,
+.product:hover{
 transform:translateY(-10px);
 border:1px solid #d4af37;
+box-shadow:0 10px 25px rgba(212,175,55,.3);
 }
 
 footer{
 background:#111;
-padding:40px;
 text-align:center;
-line-height:2;
+padding:50px 20px;
 margin-top:50px;
+}
+
+footer h2{
+margin-bottom:20px;
+}
+
+.social-btn{
+display:inline-block;
+margin:10px;
+padding:12px 24px;
+background:#d4af37;
+color:#000;
+text-decoration:none;
+font-weight:600;
+border-radius:30px;
+transition:.3s;
+}
+
+.social-btn:hover{
+background:#fff;
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(212,175,55,.4);
+}
+
+footer p{
+margin-top:20px;
+color:#aaa;
 }
 
 @media(max-width:768px){
@@ -124,10 +165,21 @@ flex-direction:column;
 
 nav{
 margin-top:15px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+margin:10px;
 }
 
 .hero h1{
 font-size:2rem;
+}
+
+.hero p{
+font-size:1rem;
 }
 
 }
