@@ -181,5 +181,26 @@ font-size:2rem;
 .hero p{
 font-size:1rem;
 }
+@media(max-width:768px){
 
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+}
+
+/* Paste the new code below */
+
+.product img{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
 }
